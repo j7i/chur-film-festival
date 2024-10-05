@@ -131,7 +131,7 @@ export default function Home() {
               Ein offener Austausch über unsere Fortschritte und
               Herausforderungen ist uns dabei von grosser Bedeutung. Um die
               Erstausgabe des Chur Film Festivals erfolgreich zu realisieren,
-              streben wir eine Gesamtfinanzierung von 330'000 CHF an.
+              streben wir eine Gesamtfinanzierung von CHF 330&apos;000.– an.
             </p>
           </div>
           <FinanceProgress className="my-16" />
