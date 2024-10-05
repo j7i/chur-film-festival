@@ -29,7 +29,7 @@ export default function Home() {
           <div className="w-100 flex justify-center">
             {/* mobile */}
             <div className="flex flex-col w-full md:hidden flex justify-center items-center relative">
-              <div className="w-full overflow-hidden -ml-[32px] w-[calc(100%+64px)] bg-stone-200/50 ">
+              <div className="overflow-hidden -ml-[32px] w-[calc(100%+64px)] bg-stone-200/50 ">
                 <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
                   title="STECHER_Fabio_DirectorsReel_webpage"

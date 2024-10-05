@@ -33,7 +33,7 @@ export const NewsletterSubscription: FunctionComponent<{
       </CardContent>
       <CardFooter>
         <Button variant={"default"} disabled className="w-full">
-          Ja, ich will informiert werden
+          Ja, ich will informiert bleiben
         </Button>
       </CardFooter>
     </Card>
