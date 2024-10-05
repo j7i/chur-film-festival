@@ -47,7 +47,7 @@ export default function Home() {
                 <span className="text-[160px] font-extrabold text-white/90 absolute -bottom-[115px] text-center z-30">
                   Film Festival
                 </span>
-                {/* <iframe
+                <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
                   width="2440"
                   height="1373"
@@ -56,7 +56,7 @@ export default function Home() {
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   id="bg-vid"
                   style={{ width: "1440px", height: "760px" }}
-                ></iframe> */}
+                ></iframe>
               </div>
             </div>
           </div>
