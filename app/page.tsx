@@ -13,6 +13,8 @@ import { Separator } from "@/components/ui/separator";
 import { FinanceProgress } from "@/components/finance-progress";
 import { NewsletterSubscription } from "@/components/newsletter-subscription";
 
+import SVGRaceSquare from "../public/static/shapes/race-square.svg";
+
 export default function Home() {
   return (
     <>
@@ -29,6 +31,11 @@ export default function Home() {
           <div className="w-100 flex justify-center">
             {/* mobile */}
             <div className="flex flex-col w-full md:hidden flex justify-center items-center relative">
+              {/* Balance the blend mode text while loading the video content */}
+              <span className="text-7xl font-extrabold text-black mt-4 absolute">
+                Chur <br />
+                Film Festival
+              </span>
               <div className="overflow-hidden -ml-[32px] w-[calc(100%+64px)] bg-stone-200/50 ">
                 <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
@@ -73,6 +80,7 @@ export default function Home() {
                 ></iframe>
               </div>
             </div>
+              <Image src={SVGRaceSquare} alt="Shape" width={69} height={69} className="absolute bottom-0 right-0" />
           </div>
         </div>
       </div>
