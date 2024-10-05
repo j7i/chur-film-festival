@@ -1,49 +1,79 @@
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
-import {
-  EnvelopeClosedIcon,
-  ExternalLinkIcon,
-} from "@radix-ui/react-icons";
+import { EnvelopeClosedIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <div className="bg-dark-red p-4 md:p-6 pb-20 md:pb-0 flex flex-col min-h-[calc(80vh)] items-center justify-center relative overflow-hidden">
-      <Image
-              className="invert-0 dark:invert-100 absolute top-9 left-0"
-              src="/static/chur-film-festival-logo.png"
-              alt="Next.js logo"
-              width={400}
-              height={200}
-              priority
-            />
-        <h1 className="text-[160px] font-extrabold text-white absolute top-0 text-center leading-[532px]">Chur <br/>Film Festival</h1>
+        <Image
+          className="invert-0 dark:invert-100 absolute top-9 left-0"
+          src="/static/chur-film-festival-logo.png"
+          alt="Next.js logo"
+          width={400}
+          height={200}
+          priority
+        />
+        <h1 className="text-[160px] font-extrabold text-white absolute top-0 text-center leading-[532px]">
+          Chur <br />
+          Film Festival
+        </h1>
         <div className="max-w-[1200px] w-full">
           <div className="w-100 flex justify-center">
             <div className="w-[1200px] h-[520px] bg-stone-200/50 flex justify-center items-center">
-            <p className="font-[family-name:var(--font-geist-mono)] text-white">Content loading...</p>
+              <p className="font-[family-name:var(--font-geist-mono)] text-white">
+                Content loading...
+              </p>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Intro */}
       <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-8">
-            Sommer 2025
-          </h1>
+          <h1 className="text-6xl font-extralight  mb-8">Sommer 2025</h1>
           <p className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
             Filmvielfalt zur Bündner Bevölkerung bringt.
           </p>
           <p className="text-lg leading-10">
-            Es dient als Knotenpunkt für Film- und Kunstliebhaber, verbindet und
-            inspiriert die Gemeinschaft und lokale Filmemacher. Unser Hauptziel
-            ist die Förderung des Schweizer Films, des Storytellings und die
-            Bereitstellung eines vielfältigen, zugänglichen Filmprogramms.
+            Als Knotenpunkt für Film- und Kunstliebhaber verbindet und
+            inspiriert das Festival die Gemeinschaft und lokale Filmemacher.
+            Unser Hauptziel ist die Förderung des Schweizer Films, des
+            Storytellings und die Bereitstellung eines vielfältigen,
+            zugänglichen Filmprogramms.
           </p>
         </div>
       </div>
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+
+      {/* Milestones */}
+      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+        <div className="max-w-[800px] w-full ">
+          <h1 className="text-6xl font-extralight  mb-8">Von der Idee zum Fazit</h1>
+          <p className="text-3xl  font-bold leading-10 mb-4">
+            Hier erhälst du einen Einblick in die wichtigsten Meilensteine des Chur Film Festivals.
+          </p>
+          <p className="text-lg leading-10">
+            To be continued...
+          </p>
+        </div>
+      </div>
+
+      {/* Finance */}
+      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+        <div className="max-w-[800px] w-full ">
+          <h1 className="text-6xl font-extralight  mb-8">Mittel zur Förderung</h1>
+          <p className="text-3xl  font-bold leading-10 mb-4">
+          Wir sind auf finanzielle Unterstützung verschiedener Stellen angewiesen, um das Chur Film Festival durchzuführen.
+          </p>
+          <p className="text-lg leading-10">
+            To be continued...
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center min-h-[calc(80vh)] p-8 pb-20 sm:p-20">
         <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[800px]">
           <h2 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
             Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
@@ -71,35 +101,35 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
-            href="mailto:reich@churfilmfestival.ch"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <EnvelopeClosedIcon width={16} height={16} />
-            Daniel Reich - Co-Präsident
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
-            href="mailto:reich@churfilmfestival.ch"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <EnvelopeClosedIcon width={16} height={16} />
-            Fabio Stecher - Co-Präsident
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
-            href="/impressum"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Impressum →
-          </a>
-        </footer>
       </div>
+      <footer className="flex flex-col md:flex-row p-6 gap-6 flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
+          href="mailto:reich@churfilmfestival.ch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <EnvelopeClosedIcon width={16} height={16} />
+          Daniel Reich - Co-Präsident
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
+          href="mailto:reich@churfilmfestival.ch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <EnvelopeClosedIcon width={16} height={16} />
+          Fabio Stecher - Co-Präsident
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
+          href="/impressum"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Impressum
+        </a>
+      </footer>
       <div className="fixed bottom-2 right-2 ">
         <ThemeToggleButton />
       </div>
