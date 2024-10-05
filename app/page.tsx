@@ -29,13 +29,13 @@ export default function Home() {
           <div className="w-100 flex justify-center">
             {/* mobile */}
             <div className="flex flex-col w-full md:hidden flex justify-center items-center relative">
-              <div className="w-full overflow-hidden -ml-8 w-[calc(100%+8rem)] bg-stone-200/50 ">
+              <div className="w-full overflow-hidden -ml-[32px] w-[calc(100%+64px)] bg-stone-200/50 ">
                 <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
                   title="STECHER_Fabio_DirectorsReel_webpage"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   id="bg-vid"
-                  className="w-[864px] h-[430px] opacity-90"
+                  className="w-[800px] h-[430px] opacity-90"
                 ></iframe>
               </div>
               <h1 className="text-7xl font-extrabold text-white mt-4 absolute mix-blend-difference">
@@ -78,13 +78,13 @@ export default function Home() {
       </div>
 
       {/* Intro */}
-      <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+      <section className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h2 className="text-5xl md:text-6xl font-extralight mb-6">Sommer 2025</h2>
-          <p className="text-3xl  font-bold leading-10 mb-4">
+          <h3 className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
             Filmvielfalt zur Bündner Bevölkerung bringt.
-          </p>
+          </h3>
           <p className="text-lg leading-9 mb-8">
             Als Knotenpunkt für Film- und Kunstliebhaber verbindet und
             inspiriert das Festival die Gemeinschaft und lokale
@@ -99,7 +99,7 @@ export default function Home() {
             nach erfolgreicher Finanzierung, im Spätsommer 2025 geplant.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Partner */}
       <div className="px-8 flex flex-col items-center justify-center">
@@ -121,15 +121,15 @@ export default function Home() {
       </div>
 
       {/* Milestones */}
-      <div className="bg-background px-8 md:px-12 flex flex-col min-h-[calc(50vh)] items-center justify-center gap-8">
+      <section className="bg-background px-8 md:px-12 flex flex-col min-h-[calc(50vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h2 className="text-5xl md:text-6xl font-extralight  mb-6">
             Von der Idee zum Fazit
           </h2>
-          <p className="text-3xl  font-bold leading-10 mb-4">
+          <h3 className="text-3xl  font-bold leading-10 mb-4">
             Das Programm setzt sich aus Langspielfilme, Kurzfilme,
             Dokumentationen und Musikvideos zusammen.
-          </p>
+          </h3>
           <p className="text-lg leading-9">
             Unser Ziel als Zentrum für Film- und Kunstliebhaber ist es, nicht
             nur ein Festival zu kreieren, sondern ein Erlebnis zu gestalten, das
@@ -137,8 +137,8 @@ export default function Home() {
             unterstützt und inspiriert.
           </p>
         </div>
-      </div>
-      <div className="bg-background px-8 md:px-12 flex flex-col items-center justify-center mb-16 overflow-hidden">
+      </section>
+      <section className="bg-background px-8 md:px-12 flex flex-col items-center justify-center mb-8 overflow-hidden">
         <div className="max-w-[1200px] w-full mb-12">
           <div className="flex justify-center mb-12">
             <p className="text-lg leading-9 max-w-[800px]">
@@ -148,20 +148,20 @@ export default function Home() {
               streben wir eine Gesamtfinanzierung von CHF 330&apos;000.– an.
             </p>
           </div>
-          <FinanceProgress className="my-0 md:my-16" />
+          <FinanceProgress />
         </div>
-      </div>
+      </section>
 
       {/* Finance */}
-      <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+      <section className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h2 className="text-5xl md:text-6xl font-extralight  mb-6">
             Mittel zur Förderung
           </h2>
-          <p className="text-3xl  font-bold leading-10 mb-4">
+          <h3 className="text-3xl  font-bold leading-10 mb-4">
             Die finanzielle Unterstützung verschiedener Stellen können eine
             Durchführung des Chur Film Festivals ermöglichen.
-          </p>
+          </h3>
           <p className="text-lg leading-9 mb-4">
             Das Chur Film Festival entfaltet sich in renommierten Kulturstätten
             wie dem Arcas Platz, dem Stadttheater, der Postremise und dem
@@ -179,9 +179,9 @@ export default function Home() {
             Filmschaffender oder Unterstützer.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="overflow-x-hidden overflow-y-scroll p-12 pb-20 sm:p-20 bg-artsy-off-white dark:bg-zinc-900">
+      <section className="overflow-x-hidden overflow-y-scroll p-12 pb-20 sm:p-20 bg-artsy-off-white dark:bg-zinc-900">
         <Carousel
           opts={{
             align: "start",
@@ -214,19 +214,19 @@ export default function Home() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div>
+      </section>
 
-      <div className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
-        <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[1000px]">
-          <h2 className="text-5xl md:text-6xl font-extralight mt-12 mb-6">
-            Hilf mit, das Festival zu realisieren
+      <section className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
+        <div className="flex flex-col row-start-2 items-center sm:items-start max-w-[1000px]">
+          <h2 className="text-5xl md:text-6xl font-extralight mb-6">
+          Hilf mit, das Festival zu realisieren
           </h2>
-          <h3 className="text-2xl font-[family-name:var(--font-geist-mono)] leading-9">
-            Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
-            Premiere mit dem Chur Film Festival.
+          <h3 className="text-3xl  font-bold leading-10 mb-4">
+          Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
+          Premiere mit dem Chur Film Festival.
           </h3>
 
-          <div className="flex gap-4 items-center flex-col sm:flex-row w-full">
+          <div className="flex gap-4 items-center flex-col sm:flex-row w-full mt-8">
             <a
               className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-md sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto"
               href="https://donate.raisenow.io/sptqm"
@@ -247,7 +247,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Newsletter */}
       <div className="relative w-full p-4 xl:p-0">

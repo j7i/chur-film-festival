@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
 
 interface FinanceProgressProps {
-  className: string;
+  className?: string;
 }
 
 export const FinanceProgress: FunctionComponent<FinanceProgressProps> = ({
