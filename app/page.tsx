@@ -16,9 +16,9 @@ import { NewsletterSubscription } from "@/components/newsletter-subscription";
 export default function Home() {
   return (
     <>
-      <div className="bg-dark-red p-4 md:p-6 pb-20 md:pb-0 flex flex-col min-h-[calc(80vh)] md:h-[776px] items-center justify-center relative overflow-hidden">
+      <div className="bg-dark-red p-4 md:p-6 pb-0 flex flex-col md:min-h-[calc(80vh)] md:h-[776px] items-center justify-center relative overflow-hidden">
         <Image
-          className="invert-0 dark:invert-100 absolute top-9 left-0 z-30"
+          className="invert-0 dark:invert-100 md:absolute top-9 left-0 z-30"
           src="/static/chur-film-festival-logo.png"
           alt="Next.js logo"
           width={400}
@@ -27,7 +27,23 @@ export default function Home() {
         />
         <div className="max-w-[1200px] w-full z-10">
           <div className="w-100 flex justify-center">
-            <div className="w-[1200px] h-[520px] bg-stone-200/50 flex justify-center items-center relative">
+            {/* mobile */}
+            <div className="flex flex-col w-full md:hidden flex justify-center items-center relative">
+              <div className="w-full overflow-hidden -ml-6 mr-6 w-[calc(100%+6rem)] bg-stone-200/50 ">
+              <iframe
+                src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
+                title="STECHER_Fabio_DirectorsReel_webpage"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                id="bg-vid"
+                className="w-[864px] h-[430px] opacity-90"
+              ></iframe>
+              </div>
+              <h1 className="text-7xl font-extrabold text-white mt-4 absolute mix-blend-difference">
+                Chur <br/>Film Festival
+              </h1>
+            </div>
+            {/* desktop */}
+            <div className="w-[1200px] h-[520px] bg-stone-200/50  hidden md:flex justify-center items-center relative">
               <span className="text-[160px] font-extrabold text-white absolute -top-[137px] text-center z-0">
                 Chur
               </span>
@@ -49,13 +65,10 @@ export default function Home() {
                 </span>
                 <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
-                  width="2440"
-                  height="1373"
-                  scrolling="no"
                   title="STECHER_Fabio_DirectorsReel_webpage"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   id="bg-vid"
-                  style={{ width: "1440px", height: "760px" }}
+                  className="w-[1440px] h-[760px] opacity-90"
                 ></iframe>
               </div>
             </div>
