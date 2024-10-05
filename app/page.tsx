@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
+import { FinanceProgress } from "@/components/finance-progress";
 
 export default function Home() {
   return (
@@ -87,12 +88,11 @@ export default function Home() {
 
       {/* Partner */}
       <div className="px-8 flex flex-col items-center justify-center">
-      <div className="max-w-[1440px] w-full ">
-        <h2 className="text-xl font-bold  mb-6">Unsere Partner</h2>
+        <div className="max-w-[1440px] w-full ">
+          <h2 className="text-xl font-bold  mb-6">Unsere Partner</h2>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row p-8 justify-center items-center w-full gap-20 flex-wrap dark:invert">
-
+      <div className="flex flex-col md:flex-row p-8 justify-center items-center w-full gap-20 flex-wrap dark:invert mb-16">
         {partner.map((partner) => (
           <Image
             key={partner.name}
@@ -106,7 +106,7 @@ export default function Home() {
       </div>
 
       {/* Milestones */}
-      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+      <div className="bg-background px-8 md:px-12 flex flex-col min-h-[calc(50vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h1 className="text-6xl font-extralight  mb-6">
             Von der Idee zum Fazit
@@ -121,6 +121,19 @@ export default function Home() {
             die Gemeinschaft und regionale Filmemacher:innen zusammenbringt,
             unterstützt und inspiriert.
           </p>
+        </div>
+      </div>
+      <div className="bg-background px-8 md:px-12 flex flex-col items-center justify-center mb-16">
+        <div className="max-w-[1200px] w-full mb-12">
+          <div className="flex justify-center mb-8">
+            <p className="text-lg leading-9 max-w-[800px]">
+              Ein offener Austausch über unsere Fortschritte und
+              Herausforderungen ist uns dabei von großer Bedeutung. Um die
+              Erstausgabe des Chur Film Festivals erfolgreich zu realisieren,
+              streben wir eine Gesamtfinanzierung von 330'000 CHF an.
+            </p>
+          </div>
+          <FinanceProgress className="my-16" />
         </div>
       </div>
 
