@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { CardFooter } from "../ui/card";
+import { Cross1Icon } from "@radix-ui/react-icons";
 
 export const SubscriptionForm = () => {
   const [isSubscribing, setIsSubscribing] = useState(false);
@@ -21,7 +22,12 @@ export const SubscriptionForm = () => {
   return (
     <>
       {isSubscribing ? (
+        <>
+        <Button variant={"ghost"} onClick={() => setIsSubscribing(false)} className="absolute top-2 right-2">
+          <Cross1Icon width={16} height={16} />
+        </Button>
         <NewsletterForm />
+        </>
       ) : (
         <CardFooter>
           <Button

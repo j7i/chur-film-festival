@@ -40,7 +40,7 @@ export const FinanceProgress: FunctionComponent<FinanceProgressProps> = ({
         </div>
       </div>
       <div
-        className="absolute top-0 z-20 bottom-12 h-11 border-dashed border-black border-l-2"
+        className="absolute top-0 z-20 bottom-12 h-11 border-dashed border-foreground border-l-2"
         style={{ left: `${restructuringPercentage}%` }}
       />
 

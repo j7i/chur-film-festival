@@ -14,12 +14,12 @@ export const NewsletterSubscription: FunctionComponent<{
   return (
     <Card className={cn("max-w-[380px] w-full", className)}>
       <CardHeader>
-        <CardTitle>Neuigkeiten</CardTitle>
+        <CardTitle className="mb-2">Neuigkeiten</CardTitle>
         <CardDescription>
           Wir informieren dich mit Neuigkeiten rund um das Churer Filmfestival.
         </CardDescription>
       </CardHeader>
-        <SubscriptionForm />
+      <SubscriptionForm />
     </Card>
   );
 };
