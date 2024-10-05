@@ -1,7 +1,7 @@
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
 import { EnvelopeClosedIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import { timeline } from "./content/timeline";
+import { timeline } from "../content/timeline";
 import {
   Carousel,
   CarouselContent,
@@ -65,7 +65,7 @@ export default function Home() {
       {/* Intro */}
       <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-6">Sommer 2025</h1>
+          <h2 className="text-6xl font-extralight  mb-6">Sommer 2025</h2>
           <p className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
             Filmvielfalt zur Bündner Bevölkerung bringt.
@@ -108,9 +108,9 @@ export default function Home() {
       {/* Milestones */}
       <div className="bg-background px-8 md:px-12 flex flex-col min-h-[calc(50vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-6">
+          <h2 className="text-6xl font-extralight  mb-6">
             Von der Idee zum Fazit
-          </h1>
+          </h2>
           <p className="text-3xl  font-bold leading-10 mb-4">
             Das Programm setzt sich aus Langspielfilme, Kurzfilme,
             Dokumentationen und Musikvideos zusammen.
@@ -140,9 +140,9 @@ export default function Home() {
       {/* Finance */}
       <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-6">
+          <h2 className="text-6xl font-extralight  mb-6">
             Mittel zur Förderung
-          </h1>
+          </h2>
           <p className="text-3xl  font-bold leading-10 mb-4">
             Die finanzielle Unterstützung verschiedener Stellen können eine
             Durchführung des Chur Film Festivals ermöglichen.
@@ -202,11 +202,14 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
-        <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[800px]">
-          <h2 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)] leading-9">
+        <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[1000px]">
+        <h2 className="text-6xl font-extralight  mb-6">
+            Hilf mit, das Festival zu realisieren
+          </h2>
+          <h3 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)] leading-9">
             Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
             Premiere mit dem Chur Film Festival.
-          </h2>
+          </h3>
 
           <div className="flex gap-4 items-center flex-col sm:flex-row">
             <a
@@ -231,7 +234,7 @@ export default function Home() {
         </div>
       </div>
       <Separator />
-      <footer className="flex flex-col md:flex-row p-6 gap-8 md:gap-16 flex-wrap items-center justify-center bg-muted-background relative bg-artsy-off-white dark:bg-zinc-900">
+      <footer className="flex flex-col md:flex-row p-6 gap-8 md:gap-16 flex-wrap items-center justify-center bg-muted-background relative bg-artsy-off-white dark:bg-zinc-900 font-[family-name:var(--font-geist-mono)]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
           href="mailto:reich@churfilmfestival.ch"
