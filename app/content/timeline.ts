@@ -84,7 +84,7 @@ export const timeline = [
         {
           title: "Beginn der Besucher-Marketingkampagne",
           description:
-            "Umsetzung gezielter Werbe- und Marketingmaßnahmen zur Gewinnung von Festivalbesuchern.",
+            "Umsetzung gezielter Werbe- und Marketingmassnahmen zur Gewinnung von Festivalbesuchern.",
         },
         {
           title: "Einrichtung des Festivalbüros",
@@ -131,7 +131,7 @@ export const timeline = [
         {
           title: "Feedback-Gespräche und Optimierungspläne",
           description:
-            "Durchführung von Gesprächen mit Schlüsselakteuren und Erarbeitung von Verbesserungsmaßnahmen für 2026.",
+            "Durchführung von Gesprächen mit Schlüsselakteuren und Erarbeitung von Verbesserungsmassnahmen für 2026.",
         },
         {
           title: "Neuausrichtung der Marketingstrategie",

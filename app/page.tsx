@@ -128,7 +128,7 @@ export default function Home() {
           <div className="flex justify-center mb-8">
             <p className="text-lg leading-9 max-w-[800px]">
               Ein offener Austausch über unsere Fortschritte und
-              Herausforderungen ist uns dabei von großer Bedeutung. Um die
+              Herausforderungen ist uns dabei von grosser Bedeutung. Um die
               Erstausgabe des Chur Film Festivals erfolgreich zu realisieren,
               streben wir eine Gesamtfinanzierung von 330'000 CHF an.
             </p>
