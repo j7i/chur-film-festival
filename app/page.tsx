@@ -1,6 +1,15 @@
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
 import { EnvelopeClosedIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import { timeline } from "./content/timeline";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
@@ -30,10 +39,10 @@ export default function Home() {
                 <span className="text-[160px] font-extrabold text-white absolute -bottom-[115px] text-center mix-blend-difference z-20">
                   Film Festival
                 </span>
-                <span className="text-[160px] font-extrabold text-white/85 absolute -top-[137px] text-center z-30">
+                <span className="text-[160px] font-extrabold text-white/90 absolute -top-[137px] text-center z-30">
                   Chur
                 </span>
-                <span className="text-[160px] font-extrabold text-white/85 absolute -bottom-[115px] text-center z-30">
+                <span className="text-[160px] font-extrabold text-white/90 absolute -bottom-[115px] text-center z-30">
                   Film Festival
                 </span>
                 <iframe
@@ -55,52 +64,127 @@ export default function Home() {
       {/* Intro */}
       <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-8">Sommer 2025</h1>
+          <h1 className="text-6xl font-extralight  mb-6">Sommer 2025</h1>
           <p className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
             Filmvielfalt zur Bündner Bevölkerung bringt.
           </p>
-          <p className="text-lg leading-10">
+          <p className="text-lg leading-9 mb-8">
             Als Knotenpunkt für Film- und Kunstliebhaber verbindet und
-            inspiriert das Festival die Gemeinschaft und lokale Filmemacher.
-            Unser Hauptziel ist die Förderung des Schweizer Films, des
-            Storytellings und die Bereitstellung eines vielfältigen,
+            inspiriert das Festival die Gemeinschaft und lokale
+            Filmemacher:innen. Unser Hauptziel ist die Förderung des Schweizer
+            Films, des Storytellings und die Bereitstellung eines vielfältigen,
             zugänglichen Filmprogramms.
           </p>
+          <p className="text-lg leading-9 mb-8">
+            Filmfestivals sind von grosser Bedeutung für die Filmbranche und
+            bieten Filmemacher:innen eine wichtige Plattform für die Verbreitung
+            ihrer Werke. Die erste Durchführung des Chur Film Festivals ist,
+            nach erfolgreicher Finanzierung, im Spätsommer 2025 geplant.
+          </p>
         </div>
+      </div>
+
+      {/* Partner */}
+      <div className="flex flex-col md:flex-row p-8 justify-center items-center w-full gap-20 flex-wrap dark:invert">
+        {partner.map((partner) => (
+          <Image
+            key={partner.name}
+            src={partner.logo}
+            alt={partner.name}
+            width={200}
+            height={200}
+            priority
+          />
+        ))}
       </div>
 
       {/* Milestones */}
       <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-8">
+          <h1 className="text-6xl font-extralight  mb-6">
             Von der Idee zum Fazit
           </h1>
           <p className="text-3xl  font-bold leading-10 mb-4">
-            Erhalte Einblick in die wichtigsten Meilensteine des Chur Film
-            Festivals.
+            Das Programm setzt sich aus Langspielfilme, Kurzfilme,
+            Dokumentationen und Musikvideos zusammen.
           </p>
-          <p className="text-lg leading-10">To be continued...</p>
+          <p className="text-lg leading-9">
+            Unser Ziel als Zentrum für Film- und Kunstliebhaber ist es, nicht
+            nur ein Festival zu kreieren, sondern ein Erlebnis zu gestalten, das
+            die Gemeinschaft und regionale Filmemacher:innen zusammenbringt,
+            unterstützt und inspiriert.
+          </p>
         </div>
       </div>
 
       {/* Finance */}
       <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h1 className="text-6xl font-extralight  mb-8">
+          <h1 className="text-6xl font-extralight  mb-6">
             Mittel zur Förderung
           </h1>
           <p className="text-3xl  font-bold leading-10 mb-4">
-            Wir sind auf finanzielle Unterstützung verschiedener Stellen
-            angewiesen, um das Chur Film Festival durchzuführen.
+            Die finanzielle Unterstützung verschiedener Stellen können eine
+            Durchführung des Chur Film Festivals ermöglichen.
           </p>
-          <p className="text-lg leading-10">To be continued...</p>
+          <p className="text-lg leading-9 mb-4">
+            Das Chur Film Festival entfaltet sich in renommierten Kulturstätten
+            wie dem Arcas Platz, dem Stadttheater, der Postremise und dem
+            Marsöl. Besondere Highlights sind die Freiluftvorstellungen auf dem
+            Arcas Platz. Neben einzigartigen Filmerlebnissen bietet das Festival
+            ein abwechslungsreiches Rahmenprogramm mit Podiumsdiskussionen,
+            Branchen-Screenings, Workshops und Partys.
+          </p>
+          <p className="text-lg leading-9">
+            Unser ehrgeiziges Ziel bei der Planung dieses Festivals ist es, die
+            Filmkunst zugänglich zu machen, den kulturellen Austausch zu fördern
+            und Chur als pulsierenden Treffpunkt für Filmbegeisterte aus der
+            gesamten Schweiz und darüber hinaus zu etablieren. Wir laden Sie
+            ein, an dieser Reise teilzunehmen - sei es als Besucher,
+            Filmschaffender oder Unterstützer.
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center min-h-[calc(80vh)] p-8 pb-20 sm:p-20">
+      <div className="overflow-x-hidden overflow-y-scroll p-12 pb-20 sm:p-20 bg-artsy-off-white dark:bg-zinc-900">
+        <Carousel
+          opts={{
+            align: "start",
+            inViewThreshold: 0.2,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-1">
+            {timeline.map((item, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-1 md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="flex flex-col gap-8 mr-8">
+                  <h2 className="text-2xl font-[family-name:var(--font-geist-mono)] leading-9">
+                    {item.time}
+                  </h2>
+                  <ul className="grid grid-cols-1 gap-6">
+                    {item.description.map((desc, index) => (
+                      <li key={index} className="flex flex-col gap-2">
+                        <h3 className="text-lg font-bold">{desc.title}</h3>
+                        <p className="text-lg">{desc.description}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+
+      <div className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
         <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[800px]">
-          <h2 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          <h2 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)] leading-9">
             Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
             Premiere mit dem Chur Film Festival.
           </h2>
@@ -127,7 +211,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="flex flex-col md:flex-row p-6 gap-6 flex-wrap items-center justify-center">
+      <Separator />
+      <footer className="flex flex-col md:flex-row p-6 gap-8 md:gap-16 flex-wrap items-center justify-center bg-muted-background relative bg-artsy-off-white dark:bg-zinc-900">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
           href="mailto:reich@churfilmfestival.ch"
@@ -154,10 +239,33 @@ export default function Home() {
         >
           Impressum
         </a>
+        <div className="absolute bottom-4 right-4 ">
+          <ThemeToggleButton />
+        </div>
       </footer>
-      <div className="fixed bottom-2 right-2 ">
-        <ThemeToggleButton />
-      </div>
     </>
   );
 }
+
+const partner = [
+  {
+    name: "RTR",
+    logo: "/static/partner/RTR.png",
+  },
+  {
+    name: "Somedia",
+    logo: "/static/partner/somedia.png",
+  },
+  {
+    name: "Communicaziun",
+    logo: "/static/partner/communicaziun.png",
+  },
+  {
+    name: "Chur Bus",
+    logo: "/static/partner/chur-bus.png",
+  },
+  {
+    name: "Transreno",
+    logo: "/static/partner/transreno.png",
+  },
+] as const;

@@ -14,6 +14,14 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         ["dark-red"]: "hsl(var(--dark-red))",
+        artsy: {
+          orange: "var(--orange)",
+          yellow: "var(--yellow)",
+          green: "var(--green)",
+          blue: "var(--blue)",
+          purple: "var(--purple)",
+          ["off-white"]: "var(--off-white)",
+        },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
