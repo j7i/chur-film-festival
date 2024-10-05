@@ -96,7 +96,7 @@ const Impressum = () => {
               Infomaniak übermittelt. Infomaniak wird diese Daten nicht an
               Dritte weitergeben oder für andere Zwecke als für den Versand des
               Newsletters verwenden. Jeder versendete Newsletter ist mit einem
-              "Abmelde-Link" versehen.
+              &quot;Abmelde-Link&quot; versehen.
             </p>
           </div>
         </div>

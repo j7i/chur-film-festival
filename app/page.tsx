@@ -29,17 +29,18 @@ export default function Home() {
           <div className="w-100 flex justify-center">
             {/* mobile */}
             <div className="flex flex-col w-full md:hidden flex justify-center items-center relative">
-              <div className="w-full overflow-hidden -ml-6 mr-6 w-[calc(100%+6rem)] bg-stone-200/50 ">
-              <iframe
-                src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
-                title="STECHER_Fabio_DirectorsReel_webpage"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                id="bg-vid"
-                className="w-[864px] h-[430px] opacity-90"
-              ></iframe>
+              <div className="w-full overflow-hidden -ml-8 w-[calc(100%+8rem)] bg-stone-200/50 ">
+                <iframe
+                  src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
+                  title="STECHER_Fabio_DirectorsReel_webpage"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  id="bg-vid"
+                  className="w-[864px] h-[430px] opacity-90"
+                ></iframe>
               </div>
               <h1 className="text-7xl font-extrabold text-white mt-4 absolute mix-blend-difference">
-                Chur <br/>Film Festival
+                Chur <br />
+                Film Festival
               </h1>
             </div>
             {/* desktop */}
@@ -79,7 +80,7 @@ export default function Home() {
       {/* Intro */}
       <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h2 className="text-6xl font-extralight  mb-6">Sommer 2025</h2>
+          <h2 className="text-5xl md:text-6xl font-extralight mb-6">Sommer 2025</h2>
           <p className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
             Filmvielfalt zur Bündner Bevölkerung bringt.
@@ -103,10 +104,10 @@ export default function Home() {
       {/* Partner */}
       <div className="px-8 flex flex-col items-center justify-center">
         <div className="max-w-[1440px] w-full ">
-          <h2 className="text-xl font-bold  mb-6">Unsere Partner</h2>
+          <h2 className="text-xl font-bold mb-6">Unsere Partner</h2>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row p-8 justify-center items-center w-full gap-20 flex-wrap dark:invert mb-16">
+      <div className="flex flex-col md:flex-row p-8 justify-center items-center w-full gap-8 md:gap-20 flex-wrap dark:invert mb-16">
         {partner.map((partner) => (
           <Image
             key={partner.name}
@@ -122,7 +123,7 @@ export default function Home() {
       {/* Milestones */}
       <div className="bg-background px-8 md:px-12 flex flex-col min-h-[calc(50vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h2 className="text-6xl font-extralight  mb-6">
+          <h2 className="text-5xl md:text-6xl font-extralight  mb-6">
             Von der Idee zum Fazit
           </h2>
           <p className="text-3xl  font-bold leading-10 mb-4">
@@ -137,9 +138,9 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="bg-background px-8 md:px-12 flex flex-col items-center justify-center mb-16">
+      <div className="bg-background px-8 md:px-12 flex flex-col items-center justify-center mb-16 overflow-hidden">
         <div className="max-w-[1200px] w-full mb-12">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-12">
             <p className="text-lg leading-9 max-w-[800px]">
               Ein offener Austausch über unsere Fortschritte und
               Herausforderungen ist uns dabei von grosser Bedeutung. Um die
@@ -147,14 +148,14 @@ export default function Home() {
               streben wir eine Gesamtfinanzierung von CHF 330&apos;000.– an.
             </p>
           </div>
-          <FinanceProgress className="my-16" />
+          <FinanceProgress className="my-0 md:my-16" />
         </div>
       </div>
 
       {/* Finance */}
       <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h2 className="text-6xl font-extralight  mb-6">
+          <h2 className="text-5xl md:text-6xl font-extralight  mb-6">
             Mittel zur Förderung
           </h2>
           <p className="text-3xl  font-bold leading-10 mb-4">
@@ -217,17 +218,17 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
         <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[1000px]">
-          <h2 className="text-6xl font-extralight  mb-6">
+          <h2 className="text-5xl md:text-6xl font-extralight mt-12 mb-6">
             Hilf mit, das Festival zu realisieren
           </h2>
-          <h3 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)] leading-9">
+          <h3 className="text-2xl font-[family-name:var(--font-geist-mono)] leading-9">
             Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
             Premiere mit dem Chur Film Festival.
           </h3>
 
-          <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <div className="flex gap-4 items-center flex-col sm:flex-row w-full">
             <a
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-md sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto"
               href="https://donate.raisenow.io/sptqm"
               target="_blank"
               rel="noopener noreferrer"
@@ -236,7 +237,7 @@ export default function Home() {
               <ExternalLinkIcon width={16} height={16} />
             </a>
             <a
-              className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center gap-2 justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+              className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center gap-2 justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-md sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 w-full sm:w-auto"
               href="https://forms.gle/s4SsujrjdFeZxqoB7"
               target="_blank"
               rel="noopener noreferrer"

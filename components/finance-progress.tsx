@@ -17,15 +17,16 @@ export const FinanceProgress: FunctionComponent<FinanceProgressProps> = ({
   const financedPercentage = (financed / total) * 100;
   const restructuringPercentage = (restructuring / total) * 100;
   return (
-    <div className={cn(className, "relative")}>
+    <div className={cn(className, "h-[160px] md:h-unset pr-[150px] md:pr-6")}>
+      <div className="relative w-full">
       <div
         className="absolute top-12 left-0 transform -translate-x-1/2"
         style={{ left: `${financedPercentage}%` }}
       >
-        <Badge variant="outline">{formatCurrency(financed)}</Badge>
+        <Badge className="border-dark-red" variant="outline">{formatCurrency(financed)}</Badge>
       </div>
       <div
-        className="absolute -top-5 z-20 bottom-12 h-16 border-black border-l-2"
+        className="absolute top-0 z-20 bottom-12 h-11 border-dark-red border-l-2"
         style={{ left: `${financedPercentage}%` }}
       />
 
@@ -33,22 +34,23 @@ export const FinanceProgress: FunctionComponent<FinanceProgressProps> = ({
         className="absolute top-12 left-0 transform -translate-x-1/2"
         style={{ left: `${restructuringPercentage}%` }}
       >
-        <Badge variant="outline">{formatCurrency(restructuring)}</Badge>
-        <div className="absolute mt-2">
+        <Badge className="border-artsy-orange" variant="outline">{formatCurrency(restructuring)}</Badge>
+        <div className="absolute mt-2 text-sm md:text-lg">
           Durchführung mit Umstrukturierung möglich
         </div>
       </div>
       <div
-        className="absolute -top-5 z-20 bottom-12 h-16 border-dashed border-black border-l-2"
+        className="absolute top-0 z-20 bottom-12 h-11 border-dashed border-black border-l-2"
         style={{ left: `${restructuringPercentage}%` }}
       />
 
-      <div className="absolute top-12 right-0 transform translate-x-1/2">
-        <Badge variant="default">{formatCurrency(total)}</Badge>
-        <div className="absolute mt-2">Durchführung gesichert</div>
+      <div className="absolute -top-[2px] md:top-12 -right-10 md:right-0 transform translate-x-1/2 z-10">
+        <Badge className="h-6 md:h-unset" variant="default">{formatCurrency(total)}</Badge>
+        <div className="absolute mt-[2px] md:mt-2 w-[220px] md:w-auto text-sm md:text-lg">Durchführung gesichert</div>
       </div>
 
       <Progress className="h-6" value={financedPercentage} max={total} />
+    </div>
     </div>
   );
 };
