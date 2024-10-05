@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -18,6 +14,12 @@ export const metadata: Metadata = {
   title: "Chur Film Festival",
   description: "Für alle Filmbegeisterten in Chur und Umgebung und darüber hinaus.",
 };
+ 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export default function RootLayout({
   children,
@@ -25,10 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="de" suppressHydrationWarning className={`${geistMono.variable} ${inter.variable} antialiased`}>
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

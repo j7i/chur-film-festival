@@ -8,23 +8,27 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="bg-dark-red p-4 md:p-6 pb-20 md:pb-0 flex flex-col min-h-[calc(100vh)] items-center justify-center relative overflow-hidden">
-        <div className="max-w-[1200px] w-full">
-          <div className="w-100 flex justify-center">
-            <Image
-              className="invert-0 dark:invert-100"
+      <div className="bg-dark-red p-4 md:p-6 pb-20 md:pb-0 flex flex-col min-h-[calc(80vh)] items-center justify-center relative overflow-hidden">
+      <Image
+              className="invert-0 dark:invert-100 absolute top-9 left-0"
               src="/static/chur-film-festival-logo.png"
               alt="Next.js logo"
-              width={700}
-              height={400}
+              width={400}
+              height={200}
               priority
             />
+        <h1 className="text-[160px] font-extrabold text-white absolute top-0 text-center leading-[532px]">Chur <br/>Film Festival</h1>
+        <div className="max-w-[1200px] w-full">
+          <div className="w-100 flex justify-center">
+            <div className="w-[1200px] h-[520px] bg-stone-200/50 flex justify-center items-center">
+            <p className="font-[family-name:var(--font-geist-mono)] text-white">Content loading...</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(80vh)] items-center justify-center gap-8">
-        <div className="max-w-[800px] w-full font-[family-name:var(--font-geist-mono)]">
-          <h1 className="text-6xl font-bold  mb-8 tracking-wider">
+      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+        <div className="max-w-[800px] w-full ">
+          <h1 className="text-6xl font-extralight  mb-8">
             Sommer 2025
           </h1>
           <p className="text-3xl  font-bold leading-10 mb-4">
@@ -39,7 +43,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[800px]">
           <h2 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
             Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
