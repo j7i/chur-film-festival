@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { FinanceProgress } from "@/components/finance-progress";
-import { NewsletterSubscription } from "@/components/newsletter-subscription";
+import { NewsletterSubscription } from "@/components/newsletter/newsletter-subscription";
 
 import SVGRaceSquare from "../public/static/shapes/race-square.svg";
 
@@ -52,23 +52,23 @@ export default function Home() {
             </div>
             {/* desktop */}
             <div className="w-[1200px] h-[520px] bg-stone-200/50  hidden md:flex justify-center items-center relative">
-              <span className="text-[160px] font-extrabold text-white absolute -top-[137px] text-center z-0">
+              <span className="text-[160px] font-black text-white absolute -top-[135px] text-center z-0">
                 Chur
               </span>
-              <span className="text-[160px] font-extrabold text-white absolute -bottom-[115px] text-center z-0">
+              <span className="text-[160px] font-black text-white absolute -bottom-[115px] text-center z-0">
                 Film Festival
               </span>
               <div className="flex justify-center items-center w-full h-full overflow-hidden relative">
-                <span className="text-[160px] font-extrabold text-white absolute -top-[137px] text-center mix-blend-difference z-20">
+                <span className="text-[160px] font-black text-white absolute -top-[135px] text-center mix-blend-difference z-20">
                   Chur
                 </span>
-                <span className="text-[160px] font-extrabold text-white absolute -bottom-[115px] text-center mix-blend-difference z-20">
+                <span className="text-[160px] font-black text-white absolute -bottom-[115px] text-center mix-blend-difference z-20">
                   Film Festival
                 </span>
-                <span className="text-[160px] font-extrabold text-white/90 absolute -top-[137px] text-center z-30">
+                <span className="text-[160px] font-black text-white/90 absolute -top-[135px] text-center z-30">
                   Chur
                 </span>
-                <span className="text-[160px] font-extrabold text-white/90 absolute -bottom-[115px] text-center z-30">
+                <span className="text-[160px] font-black text-white/90 absolute -bottom-[115px] text-center z-30">
                   Film Festival
                 </span>
                 <iframe
@@ -80,7 +80,13 @@ export default function Home() {
                 ></iframe>
               </div>
             </div>
-              <Image src={SVGRaceSquare} alt="Shape" width={69} height={69} className="absolute bottom-0 right-0" />
+            <Image
+              src={SVGRaceSquare}
+              alt="this project needs some more money"
+              width={64}
+              height={64}
+              className="absolute bottom-0 right-0"
+            />
           </div>
         </div>
       </div>
@@ -88,7 +94,9 @@ export default function Home() {
       {/* Intro */}
       <section className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
-          <h2 className="text-5xl md:text-6xl font-extralight mb-6">Sommer 2025</h2>
+          <h2 className="text-5xl md:text-6xl font-extralight mt-16 mb-6">
+            Sommer 2025
+          </h2>
           <h3 className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
             Filmvielfalt zur Bündner Bevölkerung bringt.
@@ -161,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* Finance */}
-      <section className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+      <section className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8 mb-16">
         <div className="max-w-[800px] w-full ">
           <h2 className="text-5xl md:text-6xl font-extralight  mb-6">
             Mittel zur Förderung
@@ -227,11 +235,11 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
         <div className="flex flex-col row-start-2 items-center sm:items-start max-w-[1000px]">
           <h2 className="text-5xl md:text-6xl font-extralight mb-6">
-          Hilf mit, das Festival zu realisieren
+            Hilf mit, das Festival zu realisieren
           </h2>
           <h3 className="text-3xl  font-bold leading-10 mb-4">
-          Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
-          Premiere mit dem Chur Film Festival.
+            Sei Teil dieses kulturellen Meilensteins. <br /> Erlebe eine
+            Premiere mit dem Chur Film Festival.
           </h3>
 
           <div className="flex gap-4 items-center flex-col sm:flex-row w-full mt-8">
@@ -258,8 +266,8 @@ export default function Home() {
       </section>
 
       {/* Newsletter */}
-      <div className="relative w-full p-4 xl:p-0">
-        <NewsletterSubscription className="xl:absolute bottom-4 left-4" />
+      <div className="relative w-full p-4 xl:p-0 flex justify-center mb-8 md:mb-0">
+        <NewsletterSubscription className="xl:absolute bottom-4 right-4" />
       </div>
 
       <Separator />
