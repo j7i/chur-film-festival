@@ -5,40 +5,48 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="bg-dark-red p-4 md:p-6 pb-20 md:pb-0 flex flex-col min-h-[calc(80vh)] items-center justify-center relative overflow-hidden">
+      <div className="bg-dark-red p-4 md:p-6 pb-20 md:pb-0 flex flex-col min-h-[calc(80vh)] md:h-[776px] items-center justify-center relative overflow-hidden">
         <Image
-          className="invert-0 dark:invert-100 absolute top-9 left-0"
+          className="invert-0 dark:invert-100 absolute top-9 left-0 z-30"
           src="/static/chur-film-festival-logo.png"
           alt="Next.js logo"
           width={400}
           height={200}
           priority
         />
-        <h1 className="text-[160px] font-extrabold text-white absolute top-0 text-center leading-[532px] z-0" >
-          Chur <br />
-          Film Festival
-        </h1>
         <div className="max-w-[1200px] w-full z-10">
           <div className="w-100 flex justify-center">
-            <div className="w-[1200px] h-[520px] bg-stone-200/50 flex justify-center items-center overflow-hidden">
-            <h2 className="text-[160px] font-extrabold text-white absolute top-0 text-center leading-[532px] mix-blend-difference z-20">
-              Chur <br />
-              Film Festival
-            </h2>
-            <h2 className="text-[160px] font-extrabold text-white/80 absolute top-0 text-center leading-[532px] z-30">
-              Chur <br />
-              Film Festival
-            </h2>
-              <iframe
-                src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
-                width="2440"
-                height="1373"
-                scrolling="no"
-                title="STECHER_Fabio_DirectorsReel_webpage"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                id="bg-vid"
-                style={{ width: "1440px", height: "760px" }}
-              ></iframe>
+            <div className="w-[1200px] h-[520px] bg-stone-200/50 flex justify-center items-center relative">
+              <span className="text-[160px] font-extrabold text-white absolute -top-[137px] text-center z-0">
+                Chur
+              </span>
+              <span className="text-[160px] font-extrabold text-white absolute -bottom-[115px] text-center z-0">
+                Film Festival
+              </span>
+              <div className="flex justify-center items-center w-full h-full overflow-hidden relative">
+                <span className="text-[160px] font-extrabold text-white absolute -top-[137px] text-center mix-blend-difference z-20">
+                  Chur
+                </span>
+                <span className="text-[160px] font-extrabold text-white absolute -bottom-[115px] text-center mix-blend-difference z-20">
+                  Film Festival
+                </span>
+                <span className="text-[160px] font-extrabold text-white/85 absolute -top-[137px] text-center z-30">
+                  Chur
+                </span>
+                <span className="text-[160px] font-extrabold text-white/85 absolute -bottom-[115px] text-center z-30">
+                  Film Festival
+                </span>
+                <iframe
+                  src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
+                  width="2440"
+                  height="1373"
+                  scrolling="no"
+                  title="STECHER_Fabio_DirectorsReel_webpage"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  id="bg-vid"
+                  style={{ width: "1440px", height: "760px" }}
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
