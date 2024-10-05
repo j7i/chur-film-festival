@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { FinanceProgress } from "@/components/finance-progress";
+import { NewsletterSubscription } from "@/components/newsletter-subscription";
 
 export default function Home() {
   return (
@@ -46,7 +47,7 @@ export default function Home() {
                 <span className="text-[160px] font-extrabold text-white/90 absolute -bottom-[115px] text-center z-30">
                   Film Festival
                 </span>
-                <iframe
+                {/* <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
                   width="2440"
                   height="1373"
@@ -55,7 +56,7 @@ export default function Home() {
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   id="bg-vid"
                   style={{ width: "1440px", height: "760px" }}
-                ></iframe>
+                ></iframe> */}
               </div>
             </div>
           </div>
@@ -203,7 +204,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
         <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-[1000px]">
-        <h2 className="text-6xl font-extralight  mb-6">
+          <h2 className="text-6xl font-extralight  mb-6">
             Hilf mit, das Festival zu realisieren
           </h2>
           <h3 className="text-2xl text-center sm:text-left font-[family-name:var(--font-geist-mono)] leading-9">
@@ -233,7 +234,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Newsletter */}
+      <div className="relative w-full p-4 xl:p-0">
+        <NewsletterSubscription className="xl:absolute bottom-4 left-4" />
+      </div>
+
       <Separator />
+
       <footer className="flex flex-col md:flex-row p-6 gap-8 md:gap-16 flex-wrap items-center justify-center bg-muted-background relative bg-artsy-off-white dark:bg-zinc-900 font-[family-name:var(--font-geist-mono)]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
