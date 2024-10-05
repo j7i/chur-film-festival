@@ -14,6 +14,7 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         ["dark-red"]: "hsl(var(--dark-red))",
+        maroon: "hsl(var(--maroon))",
         artsy: {
           orange: "var(--orange)",
           yellow: "var(--yellow)",

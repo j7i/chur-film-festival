@@ -62,7 +62,7 @@ export default function Home() {
       </div>
 
       {/* Intro */}
-      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+      <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h1 className="text-6xl font-extralight  mb-6">Sommer 2025</h1>
           <p className="text-3xl  font-bold leading-10 mb-4">
@@ -86,7 +86,13 @@ export default function Home() {
       </div>
 
       {/* Partner */}
+      <div className="px-8 flex flex-col items-center justify-center">
+      <div className="max-w-[1440px] w-full ">
+        <h2 className="text-xl font-bold  mb-6">Unsere Partner</h2>
+        </div>
+      </div>
       <div className="flex flex-col md:flex-row p-8 justify-center items-center w-full gap-20 flex-wrap dark:invert">
+
         {partner.map((partner) => (
           <Image
             key={partner.name}
@@ -119,7 +125,7 @@ export default function Home() {
       </div>
 
       {/* Finance */}
-      <div className="bg-background p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
+      <div className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h1 className="text-6xl font-extralight  mb-6">
             Mittel zur Förderung
