@@ -122,7 +122,7 @@ export default function Home() {
             Filmfestivals sind von grosser Bedeutung für die Filmbranche und
             bieten Filmemacher:innen eine wichtige Plattform für die Verbreitung
             ihrer Werke. Die erste Durchführung des Chur Film Festivals ist,
-            nach erfolgreicher Finanzierung, im Spätsommer 2025 geplant.
+            <strong> nach erfolgreicher Finanzierung</strong>, im Spätsommer 2025 geplant.
           </p>
         </div>
       </section>

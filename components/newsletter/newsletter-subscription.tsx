@@ -16,7 +16,7 @@ export const NewsletterSubscription: FunctionComponent<{
       <CardHeader>
         <CardTitle className="mb-2">Neuigkeiten</CardTitle>
         <CardDescription>
-          Wir informieren dich mit Neuigkeiten rund um das Churer Filmfestival.
+          Wir informieren dich über Neuigkeiten rund um das Chur Film Festival.
         </CardDescription>
       </CardHeader>
       <SubscriptionForm />
