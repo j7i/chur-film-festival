@@ -14,6 +14,7 @@ import { FinanceProgress } from "@/components/finance-progress";
 import { NewsletterSubscription } from "@/components/newsletter/newsletter-subscription";
 
 import SVGRaceSquare from "../public/static/shapes/race-square.svg";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -195,6 +196,55 @@ export default function Home() {
             Filmschaffender oder Unterstützer.
           </p>
         </div>
+        <div className="max-w-[1440px] w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="font-light">
+                Öffentliche Fördermittel
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              Öffentliche Fördermittel von lokalen und kantonalen Kulturbehörden
+              bilden unsere erste Unterstützungssäule. Sie sind in den
+              Anfangsjahren entscheidend, um das Chur Film Festival
+              selbsttragend zu machen.
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="font-light">
+                Gelder von privaten Stiftungen
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              Die zweite Säule bilden privaten Stiftungen, welche die
+              künstlerische Freihheit und Innovation im Filmsektor unterstützen.
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="font-light">
+                Sponsoring und Partnerschaften
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              Unsere dritte Säule bildet das Sponsoring durch engagierte
+              Unternehmen und Organisationen aus der Region.
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="font-light">Deine Unterstützung</CardTitle>
+            </CardHeader>
+            <CardContent>
+              Unsere Festivalgemeinschaft stellt die letzte wesentliche
+              Unterstützungsquelle dar. Besuche, Teilnahme an Veranstaltungen
+              oder finanzielle Beiträge - jede Form der Unterstützung trägt dazu
+              bei, das Chur Film Festival zu einem unvergesslichen Erlebnis zu
+              gestalten.
+            </CardContent>
+          </Card>
+        </div>
       </section>
 
       <section className="flex justify-center px-6 pt-12 pb-20 bg-artsy-off-white dark:bg-zinc-900">
@@ -221,7 +271,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
+      <section className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8">
         <div className="flex flex-col row-start-2 items-center sm:items-start max-w-[1000px]">
           <h2 className="text-5xl md:text-6xl font-extralight mb-6">
             Hilf mit, das Festival zu realisieren
@@ -238,7 +288,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Spenden und Unterstützen
+              Spenden und unterstützen
               <ExternalLinkIcon width={16} height={16} />
             </a>
             <a
