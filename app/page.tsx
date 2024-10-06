@@ -18,25 +18,25 @@ import SVGRaceSquare from "../public/static/shapes/race-square.svg";
 export default function Home() {
   return (
     <>
-      <div className="bg-dark-red p-4 md:p-6 pb-0 flex flex-col md:min-h-[calc(80vh)] md:h-[776px] items-center justify-center relative overflow-hidden">
-        <Image
+      <div className="bg-dark-red md:p-6 pb-0 flex flex-col md:min-h-[calc(80vh)] md:h-[776px] items-center justify-center relative overflow-hidden">
+        {/* <Image
           className="invert-0 dark:invert-100 md:absolute top-9 left-0 z-30"
           src="/static/chur-film-festival-logo.png"
           alt="Next.js logo"
           width={400}
           height={200}
           priority
-        />
+        /> */}
         <div className="max-w-[1200px] w-full z-10">
           <div className="w-100 flex justify-center">
             {/* mobile */}
             <div className="flex flex-col w-full md:hidden flex justify-center items-center relative">
               {/* Balance the blend mode text while loading the video content */}
-              <span className="text-7xl font-extrabold text-black mt-4 absolute">
+              <span className="text-7xl font-extrabold text-black mt-4 absolute px-6">
                 Chur <br />
                 Film Festival
               </span>
-              <div className="overflow-hidden -ml-[32px] w-[calc(100%+64px)] bg-stone-200/50 ">
+              <div className="overflow-hidden -ml-[32px] w-[calc(100%+64px)] md:bg-stone-200/50 ">
                 <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
                   title="STECHER_Fabio_DirectorsReel_webpage"
@@ -45,7 +45,7 @@ export default function Home() {
                   className="w-[800px] h-[430px] opacity-90"
                 ></iframe>
               </div>
-              <h1 className="text-7xl font-extrabold text-white mt-4 absolute mix-blend-difference">
+              <h1 className="text-7xl font-extrabold text-white mt-4 absolute mix-blend-difference px-6">
                 Chur <br />
                 Film Festival
               </h1>
