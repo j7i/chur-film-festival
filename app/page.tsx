@@ -320,7 +320,8 @@ export default function Home() {
 
       <footer className="flex flex-col items-center lg:items-end lg:flex-row p-6 gap-8 md:gap-16 flex-wrap relative bg-artsy-off-white dark:bg-zinc-900">
         <Image
-          className="mix-blend-difference opacity-80 pt-4"
+          // logo is already greayish | may change opacity in darkmode when logo changes
+          className="mix-blend-difference opacity-80 dark:opacity-100 pt-4"
           src="/static/chur-film-festival-logo.png"
           alt="Next.js logo"
           width={400}
