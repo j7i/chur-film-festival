@@ -12,7 +12,7 @@ export const NewsletterSubscription: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (
-    <Card className={cn("max-w-[380px] w-full", className)}>
+    <Card className={cn("md:max-w-[380px] w-full", className)}>
       <CardHeader>
         <CardTitle className="mb-2">Neuigkeiten</CardTitle>
         <CardDescription>

@@ -72,13 +72,13 @@ export default function Home() {
                 <span className="text-[160px] font-black text-white absolute -bottom-[102px] -left-[39px] mix-blend-difference z-20">
                   Festival
                 </span>
-                <span className="text-[160px] font-black text-white/90 absolute -top-[104px] -left-[39px] z-30">
+                <span className="text-[160px] font-black text-white/80 absolute -top-[104px] -left-[39px] z-30">
                   Chur
                 </span>
-                <span className="text-[160px] font-black text-white/90 absolute top-[140px] -left-[39px] z-30">
+                <span className="text-[160px] font-black text-white/80 absolute top-[140px] -left-[39px] z-30">
                   Film
                 </span>
-                <span className="text-[160px] font-black text-white/90 absolute -bottom-[102px] -left-[39px] z-30">
+                <span className="text-[160px] font-black text-white/80 absolute -bottom-[102px] -left-[39px] z-30">
                   Festival
                 </span>
                 <iframe
@@ -313,7 +313,7 @@ export default function Home() {
 
       {/* Newsletter */}
       <div className="relative w-full p-4 xl:p-0 flex justify-center mb-8 md:mb-0">
-        <NewsletterSubscription className="xl:absolute bottom-4 right-4" />
+        <NewsletterSubscription className="relative xl:absolute xl:bottom-4 xl:right-4" />
       </div>
 
       <Separator />
