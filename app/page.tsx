@@ -53,24 +53,33 @@ export default function Home() {
             </div>
             {/* desktop */}
             <div className="w-[1200px] h-[520px] bg-stone-200/50  hidden md:flex justify-center items-center relative">
-              <span className="text-[160px] font-black text-white absolute -top-[135px] text-center z-0">
+              <span className="text-[160px] font-black text-white absolute -top-[104px] -left-[39px] z-0">
                 Chur
               </span>
-              <span className="text-[160px] font-black text-white absolute -bottom-[115px] text-center z-0">
-                Film Festival
+              <span className="text-[160px] font-black text-white absolute top-[140px] -left-[39px] z-0">
+                Film
+              </span>
+              <span className="text-[160px] font-black text-white absolute -bottom-[102px] -left-[39px] z-0">
+                Festival
               </span>
               <div className="flex justify-center items-center w-full h-full overflow-hidden relative">
-                <span className="text-[160px] font-black text-white absolute -top-[135px] text-center mix-blend-difference z-20">
+                <span className="text-[160px] font-black text-white absolute -top-[104px] -left-[39px] mix-blend-difference z-20">
                   Chur
                 </span>
-                <span className="text-[160px] font-black text-white absolute -bottom-[115px] text-center mix-blend-difference z-20">
-                  Film Festival
+                <span className="text-[160px] font-black text-white absolute top-[140px] -left-[39px] mix-blend-difference z-20">
+                  Film
                 </span>
-                <span className="text-[160px] font-black text-white/90 absolute -top-[135px] text-center z-30">
+                <span className="text-[160px] font-black text-white absolute -bottom-[102px] -left-[39px] mix-blend-difference z-20">
+                  Festival
+                </span>
+                <span className="text-[160px] font-black text-white/90 absolute -top-[104px] -left-[39px] z-30">
                   Chur
                 </span>
-                <span className="text-[160px] font-black text-white/90 absolute -bottom-[115px] text-center z-30">
-                  Film Festival
+                <span className="text-[160px] font-black text-white/90 absolute top-[140px] -left-[39px] z-30">
+                  Film
+                </span>
+                <span className="text-[160px] font-black text-white/90 absolute -bottom-[102px] -left-[39px] z-30">
+                  Festival
                 </span>
                 <iframe
                   src="https://fabiostecher.com/oembed/media?src=https%3a%2f%2fplayer.vimeo.com%2fvideo%2f893279290%3fdnt%3d1%26loop%3d1%26background%3d1%26app_id%3d122963&amp;url=https%3a%2f%2fvimeo.com%2f893279290%3fshare%3dcopy&amp;provider=Vimeo&amp;width=2440&amp;height=1373&amp;hostname=https%3a%2f%2ffabiostecher.com"
@@ -96,7 +105,7 @@ export default function Home() {
       <section className="p-8 md:p-12 flex flex-col min-h-[calc(60vh)] items-center justify-center gap-8">
         <div className="max-w-[800px] w-full ">
           <h2 className="text-5xl md:text-6xl font-extralight mt-16 mb-6">
-            Sommer 2025
+            Im Sommer, 2025
           </h2>
           <h3 className="text-3xl  font-bold leading-10 mb-4">
             Das Chur Film Festival als kulturelle Plattform, welche die
@@ -176,8 +185,8 @@ export default function Home() {
             Mittel zur Förderung
           </h2>
           <h3 className="text-3xl  font-bold leading-10 mb-4">
-            Die finanzielle Unterstützung verschiedener Stellen können eine
-            Durchführung des Chur Film Festivals ermöglichen.
+            Die finanzielle Unterstützung von verschiedenen Stellen können die
+            Durchführung ermöglichen.
           </h3>
           <p className="text-lg leading-9 mb-4">
             Das Chur Film Festival entfaltet sich in renommierten Kulturstätten
@@ -191,9 +200,7 @@ export default function Home() {
             Unser ehrgeiziges Ziel bei der Planung dieses Festivals ist es, die
             Filmkunst zugänglich zu machen, den kulturellen Austausch zu fördern
             und Chur als pulsierenden Treffpunkt für Filmbegeisterte aus der
-            gesamten Schweiz und darüber hinaus zu etablieren. Wir laden Sie
-            ein, an dieser Reise teilzunehmen - sei es als Besucher,
-            Filmschaffender oder Unterstützer.
+            gesamten Schweiz und darüber hinaus zu etablieren.
           </p>
         </div>
         <div className="max-w-[1440px] w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
