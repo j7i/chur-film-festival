@@ -7,7 +7,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 import { Separator } from "@/components/ui/separator";
 import { FinanceProgress } from "@/components/finance-progress";
@@ -197,26 +197,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center p-12 pb-20 sm:p-20 bg-artsy-off-white dark:bg-zinc-900">
-      <div className="max-w-[1200px] w-full ">
-      <Accordion type="single" collapsible defaultValue="Herbst 2024">
-        {timeline.map((item, index) => (
-          <AccordionItem key={index} value={item.time}>
-            <AccordionTrigger className="font-light text-2xl">{item.time}</AccordionTrigger>
-            <AccordionContent>
-              <ul className="grid grid-cols-1 gap-6 mt-2 mb-6">
-                {item.description.map((desc, index) => (
-                  <li key={index} className="flex flex-col gap-2">
-                    <h3 className="text-lg font-bold">{desc.title}</h3>
-                    <p className="text-lg">{desc.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-</Accordion>
-</div>
+      <section className="flex justify-center px-6 pt-12 pb-20 bg-artsy-off-white dark:bg-zinc-900">
+        <div className="max-w-[1200px] w-full ">
+          <Accordion type="single" collapsible defaultValue="Herbst 2024">
+            {timeline.map((item, index) => (
+              <AccordionItem key={index} value={item.time}>
+                <AccordionTrigger className="font-light text-2xl">
+                  {item.time}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="grid grid-cols-1 gap-6 mt-2 mb-6">
+                    {item.description.map((desc, index) => (
+                      <li key={index} className="flex flex-col gap-2">
+                        <h3 className="text-lg font-bold">{desc.title}</h3>
+                        <p className="text-lg">{desc.description}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </section>
 
       <section className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
@@ -259,33 +261,46 @@ export default function Home() {
 
       <Separator />
 
-      <footer className="flex flex-col md:flex-row p-6 gap-8 md:gap-16 flex-wrap items-center justify-center bg-muted-background relative bg-artsy-off-white dark:bg-zinc-900 font-[family-name:var(--font-geist-mono)]">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
-          href="mailto:reich@churfilmfestival.ch"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <EnvelopeClosedIcon width={16} height={16} />
-          Daniel Reich - Co-Präsident
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
-          href="mailto:reich@churfilmfestival.ch"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <EnvelopeClosedIcon width={16} height={16} />
-          Fabio Stecher - Co-Präsident
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
-          href="/impressum"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Impressum
-        </a>
+      <footer className="flex flex-col items-center lg:items-end lg:flex-row p-6 gap-8 md:gap-16 flex-wrap relative bg-artsy-off-white dark:bg-zinc-900">
+        <Image
+          className="mix-blend-difference opacity-80 pt-4"
+          src="/static/chur-film-festival-logo.png"
+          alt="Next.js logo"
+          width={400}
+          height={200}
+          priority
+        />
+        <div className="flex flex-col gap-2 mb-6 justify-end">
+          <h4 className="text-lg font-bold text-muted-foreground">Kontakt</h4>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
+            href="mailto:reich@churfilmfestival.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Daniel Reich - Co-Präsident
+            <EnvelopeClosedIcon width={16} height={16} />
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
+            href="mailto:reich@churfilmfestival.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fabio Stecher - Co-Präsident
+            <EnvelopeClosedIcon width={16} height={16} />
+          </a>
+        </div>
+        <div className="flex flex-col gap-2 mb-6 justify-end">
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-muted-foreground hover:text-foreground"
+            href="/impressum"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Impressum <ExternalLinkIcon width={16} height={16} />
+          </a>
+        </div>
         <div className="absolute bottom-4 right-4 ">
           <ThemeToggleButton />
         </div>
