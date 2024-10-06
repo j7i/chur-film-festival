@@ -3,12 +3,12 @@ import { EnvelopeClosedIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { timeline } from "../content/timeline";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 import { Separator } from "@/components/ui/separator";
 import { FinanceProgress } from "@/components/finance-progress";
 import { NewsletterSubscription } from "@/components/newsletter/newsletter-subscription";
@@ -197,39 +197,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="overflow-x-hidden overflow-y-scroll p-12 pb-20 sm:p-20 bg-artsy-off-white dark:bg-zinc-900">
-        <Carousel
-          opts={{
-            align: "start",
-            inViewThreshold: 0.2,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-1">
-            {timeline.map((item, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-1 md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="flex flex-col gap-8 mr-8">
-                  <h2 className="text-2xl font-[family-name:var(--font-geist-mono)] leading-9">
-                    {item.time}
-                  </h2>
-                  <ul className="grid grid-cols-1 gap-6">
-                    {item.description.map((desc, index) => (
-                      <li key={index} className="flex flex-col gap-2">
-                        <h3 className="text-lg font-bold">{desc.title}</h3>
-                        <p className="text-lg">{desc.description}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <section className="flex justify-center p-12 pb-20 sm:p-20 bg-artsy-off-white dark:bg-zinc-900">
+      <div className="max-w-[1200px] w-full ">
+      <Accordion type="single" collapsible defaultValue="Herbst 2024">
+        {timeline.map((item, index) => (
+          <AccordionItem key={index} value={item.time}>
+            <AccordionTrigger className="font-light text-2xl">{item.time}</AccordionTrigger>
+            <AccordionContent>
+              <ul className="grid grid-cols-1 gap-6 mt-2 mb-6">
+                {item.description.map((desc, index) => (
+                  <li key={index} className="flex flex-col gap-2">
+                    <h3 className="text-lg font-bold">{desc.title}</h3>
+                    <p className="text-lg">{desc.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+</Accordion>
+</div>
       </section>
 
       <section className="flex flex-col items-center justify-center min-h-[calc(75vh)] p-8 pb-20 sm:p-20">
